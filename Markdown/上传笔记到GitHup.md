@@ -57,7 +57,7 @@ $ git config user.email
 
 没有的话重新生成
 
-```ruby
+```csharp
 ssh-keygen -t rsa -C "hanyuntaocn@163.com"邮箱名为githup上面的你
 ```
 
@@ -78,3 +78,68 @@ ssh-keygen -t rsa -C "hanyuntaocn@163.com"邮箱名为githup上面的你
 Githup新建的仓库上添加到公钥
 
 ![img](assets/20220414164355 00_00_00-00_00_30.gif)
+可以通过命令验证是否通
+```csharp
+$ssh -T git@github.com
+```csharp
+```
+
+不过这里好像有点问题
+
+![image-20220414164856830](assets/image-20220414164856830.png)
+
+
+
+4.git remote add origin https://自己的仓库url地址，将本地的仓库关联到github上
+
+![image-20220414165256283](assets/image-20220414165256283.png)
+
+使用命令以下
+
+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
+
+git remote add origin https://github.com/humiyer/Document.git
+
+![image-20220414165531628](assets/image-20220414165531628.png)
+
+## 四.上传指定文件夹到githup
+
+1.git add (指定文件夹名称)提交到暂缓区
+
+![image-20220414165849018](assets/image-20220414165849018.png)
+
+2.git add .当前目前所有文件
+
+
+
+
+
+3.git status查看提交状态，绿色代表可以提交的文件夹状态
+
+![image-20220414170030929](assets/image-20220414170030929.png)
+
+4.用git commit -m "日志名称" 把缓存区的直接提交到仓库
+
+![image-20220414170331955](assets/image-20220414170331955.png)
+
+5.上传文件到githup
+
+.如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，git push。第一次使用后面就可以直接使用git push了 
+
+>git push -u origin master可能会需要密码
+
+![image-20220414170500772](assets/image-20220414170500772.png)
+
+
+
+关于问题出现不能直接上传的问题生成token才行![image-20220414170940146](assets/image-20220414170940146.png)
+
+https://blog.csdn.net/sinat_36728518/article/details/119733175?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6.pc_relevant_default&utm_relevant_index=9
+
+这里多了要输入验证的token口令
+
+![image-20220414171705664](assets/image-20220414171705664.png)
+
+上传成功
+
+![image-20220414171903881](assets/image-20220414171903881.png)
